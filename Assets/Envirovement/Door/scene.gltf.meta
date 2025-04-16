@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 5147b12f5843cdb4c82d29fd5fd3b000
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Envirovement\Door\scene.bin
+    assetPath: Assets\Envirovement\Door\scene.bin
+  - type: 1
+    originalUri: Assets\Envirovement\Door\textures\MI_Door_F_Red_diffuse.png
+    assetPath: Assets\Envirovement\Door\textures\MI_Door_F_Red_diffuse.png
+  - type: 1
+    originalUri: Assets\Envirovement\Door\textures\MI_Door_F_Red_normal.png
+    assetPath: Assets\Envirovement\Door\textures\MI_Door_F_Red_normal.png
+  - type: 1
+    originalUri: Assets\Envirovement\Door\textures\MI_Door_F_Grey.002_diffuse.png
+    assetPath: Assets\Envirovement\Door\textures\MI_Door_F_Grey.002_diffuse.png
+  - type: 1
+    originalUri: Assets\Envirovement\Door\textures\MI_Door_F_Blue.001_diffuse.png
+    assetPath: Assets\Envirovement\Door\textures\MI_Door_F_Blue.001_diffuse.png
+  - type: 1
+    originalUri: Assets\Envirovement\Door\textures\MI_Door_F_Yellow.002_diffuse.png
+    assetPath: Assets\Envirovement\Door\textures\MI_Door_F_Yellow.002_diffuse.png
+  reportItems: []

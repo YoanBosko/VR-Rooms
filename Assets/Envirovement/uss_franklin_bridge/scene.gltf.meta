@@ -1,0 +1,52 @@
+fileFormatVersion: 2
+guid: bfd2617c911250d4d8aa49aa9d4ddd2d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Envirovement\uss_franklin_bridge\scene.bin
+    assetPath: Assets\Envirovement\uss_franklin_bridge\scene.bin
+  - type: 1
+    originalUri: Assets\Envirovement\uss_franklin_bridge\textures\Ceramic_Tile_baseColor.png
+    assetPath: Assets\Envirovement\uss_franklin_bridge\textures\Ceramic_Tile_baseColor.png
+  - type: 1
+    originalUri: Assets\Envirovement\uss_franklin_bridge\textures\material_9_baseColor.jpeg
+    assetPath: Assets\Envirovement\uss_franklin_bridge\textures\material_9_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Envirovement\uss_franklin_bridge\textures\material_24_baseColor.jpeg
+    assetPath: Assets\Envirovement\uss_franklin_bridge\textures\material_24_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Envirovement\uss_franklin_bridge\textures\Rigid_Insulation_baseColor.png
+    assetPath: Assets\Envirovement\uss_franklin_bridge\textures\Rigid_Insulation_baseColor.png
+  - type: 1
+    originalUri: Assets\Envirovement\uss_franklin_bridge\textures\material_17_baseColor.png
+    assetPath: Assets\Envirovement\uss_franklin_bridge\textures\material_17_baseColor.png
+  - type: 1
+    originalUri: Assets\Envirovement\uss_franklin_bridge\textures\material_19_baseColor.png
+    assetPath: Assets\Envirovement\uss_franklin_bridge\textures\material_19_baseColor.png
+  - type: 1
+    originalUri: Assets\Envirovement\uss_franklin_bridge\textures\Concrete_Masonry_Unit_baseColor.png
+    assetPath: Assets\Envirovement\uss_franklin_bridge\textures\Concrete_Masonry_Unit_baseColor.png
+  reportItems: []
