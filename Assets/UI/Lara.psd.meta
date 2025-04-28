@@ -95,7 +95,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Lara_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695a2412b87deab458938bafde8674c9
+      internalID: -1855989015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_1
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4be7f61e2c96864e98577822a279913
+      internalID: 1017343832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_2
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af37020e286a89d4e94b2e5b18ec1ab2
+      internalID: -2086738537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_3
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f15b19f1ae47844ab3b09211926375
+      internalID: -840922632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_4
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a252b2abde7bb408dfadc7b7ec123a
+      internalID: -1363059064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_5
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bb2a8f06954784fb3d1dca47804f03
+      internalID: 792841628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_6
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377cbb26e04d42a458c3272db0c08356
+      internalID: 1162121611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_7
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860ea07083b2be9428ffdc1e3cd4505b
+      internalID: -2072448951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_8
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d6a06fe13181845b1d86aa00fe5e59
+      internalID: -1164351239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lara_9
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 2
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49967ed4f63d3b6459f0f38fe19954af
+      internalID: 1788993708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +316,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lara_0: -1855989015
+      Lara_1: 1017343832
+      Lara_2: -2086738537
+      Lara_3: -840922632
+      Lara_4: -1363059064
+      Lara_5: 792841628
+      Lara_6: 1162121611
+      Lara_7: -2072448951
+      Lara_8: -1164351239
+      Lara_9: 1788993708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
