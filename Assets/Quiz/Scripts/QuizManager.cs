@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
@@ -15,12 +16,43 @@ public class QuizManager : MonoBehaviour
     public GameObject mcVideoPanel;
 
     public Slider slider;
+    public Image[] healthIcon = new Image[3];
+    public Sprite brokenHealthIcon;
+    public Sprite normalHealthIcon;
+    public UnityEvent onQuizClear;
+    private int wrongCounter;
 
     public void Start()
     {
         slider.value = slider.minValue;
         Debug.Log("Slider terpanggil");
+        currentIndex = 0;
+        wrongCounter = 0;
+        foreach (Image image in healthIcon)
+        {
+            image.sprite = normalHealthIcon;
+        }
         LoadQuestion();
+    }
+    public void Update()
+    {
+        if (wrongCounter == 1)
+        {
+            healthIcon[0].sprite = brokenHealthIcon;
+        }
+        else if (wrongCounter == 2)
+        {
+            healthIcon[1].sprite = brokenHealthIcon;
+        }
+        else if (wrongCounter == 3)
+        {
+            Start();
+        }
+
+        if (slider.value == slider.maxValue)
+        {
+            onQuizClear?.Invoke();
+        }
     }
 
     void LoadQuestion()
@@ -34,11 +66,23 @@ public class QuizManager : MonoBehaviour
                 mcImagePanel.SetActive(true);
                 // Kirim data ke UI controller panel ini
                 mcImagePanel.GetComponent<MCImageController>().Setup((MCImageQuestion)q);
+                mcImagePanel.GetComponent<MCImageController>().onIncorrectMatch = () =>
+                {
+                    wrongCounter++;
+                };
                 break;
 
             case QuestionType.Matching:
                 matchingPanel.SetActive(true);
                 matchingPanel.GetComponent<MatchingController>().Setup((MatchingQuestion)q);
+
+                matchingPanel.GetComponent<MatchingController>().onIncorrectMatch = (qIndex, aIndex) =>
+                {
+                    // Debug.Log($"[QuizManager] Jawaban salah: Soal {qIndex}, Jawaban {aIndex}");
+                    // Tambahkan efek suara, penalti, atau feedback visual di sini
+                    wrongCounter++;
+
+                };
                 break;
 
             case QuestionType.Puzzle:
