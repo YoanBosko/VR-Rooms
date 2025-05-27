@@ -81,18 +81,26 @@ public class QuizManager : MonoBehaviour
                     // Debug.Log($"[QuizManager] Jawaban salah: Soal {qIndex}, Jawaban {aIndex}");
                     // Tambahkan efek suara, penalti, atau feedback visual di sini
                     wrongCounter++;
-
                 };
                 break;
 
             case QuestionType.Puzzle:
                 puzzlePanel.SetActive(true);
                 puzzlePanel.GetComponent<PuzzleController>().Setup((PuzzleQuestion)q);
+                puzzlePanel.GetComponent<PuzzleController>().onIncorrectMatch = () =>
+                {
+                    wrongCounter++;
+                };
                 break;
 
             case QuestionType.MultipleChoiceVideo:
                 mcVideoPanel.SetActive(true);
                 mcVideoPanel.GetComponent<MCVideoController>().Setup((MCVideoQuestion)q);
+
+                mcVideoPanel.GetComponent<MCVideoController>().onIncorrectMatch = () =>
+                {
+                    wrongCounter++;
+                };
                 break;
         }
     }
@@ -116,8 +124,12 @@ public class QuizManager : MonoBehaviour
             LoadQuestion();
         }
         else
+        {
             slider.value = slider.maxValue;
+            HideAllPanels();
             Debug.Log("Selesai!");
+        }
+            
     }
 }
 

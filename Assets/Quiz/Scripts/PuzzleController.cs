@@ -1,64 +1,84 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class PuzzleController : MonoBehaviour
 {
-    public Image[] puzzleSlots;     // Slot pertanyaan
-    public Button[] answerButtons;  // 3 opsi jawaban
+    public Image[] questionImages;     // Gambar pertanyaan (atas)
+    public Image[] puzzleSlots;        // Slot jawaban (tengah)
+    public Button[] answerButtons;     // Opsi jawaban (bawah)
 
-    private int[] currentAnswers = new int[3]; // indeks jawaban yang ditempatkan
+    private int[] currentAnswers = new int[3]; // Jawaban saat ini di slot
     private int selectedAnswerIndex = -1;
+
+    private PuzzleQuestion currentQuestion;
+    public Action onIncorrectMatch;
 
     public void Setup(PuzzleQuestion data)
     {
+        currentQuestion = data;
+
+        // Tampilkan gambar pertanyaan
         for (int i = 0; i < 3; i++)
         {
-            puzzleSlots[i].sprite = data.targets[i];
+            questionImages[i].sprite = data.questions[i];
+        }
+
+        // Reset slot kosong
+        for (int i = 0; i < 3; i++)
+        {
+            puzzleSlots[i].sprite = null;
             currentAnswers[i] = -1;
-        }
 
-        for (int i = 0; i < answerButtons.Length; i++)
-        {
-            int idx = i;
-            answerButtons[i].image.sprite = data.options[i];
-            answerButtons[i].onClick.RemoveAllListeners();
-            answerButtons[i].onClick.AddListener(() => OnAnswerClicked(idx));
-        }
-
-        // Tambahkan listener ke slot juga jika mau (misalnya user klik slot untuk mengisi)
-    }
-
-    void OnAnswerClicked(int index)
-    {
-        selectedAnswerIndex = index;
-        Debug.Log($"Jawaban {index + 1} dipilih, pilih slot tujuan.");
-
-        for (int i = 0; i < puzzleSlots.Length; i++)
-        {
             int slotIdx = i;
             Button btn = puzzleSlots[i].GetComponent<Button>();
             if (btn != null)
             {
                 btn.onClick.RemoveAllListeners();
-                btn.onClick.AddListener(() => PlaceAnswer(slotIdx));
+                btn.onClick.AddListener(() => OnSlotClicked(slotIdx));
             }
         }
+
+        // Tampilkan opsi jawaban
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            int idx = i;
+            answerButtons[i].image.sprite = data.options[i];
+            answerButtons[i].interactable = true;
+            answerButtons[i].onClick.RemoveAllListeners();
+            answerButtons[i].onClick.AddListener(() => OnAnswerClicked(idx));
+        }
+
+        selectedAnswerIndex = -1;
     }
 
-    void PlaceAnswer(int slotIndex)
+    void OnAnswerClicked(int index)
     {
-        if (selectedAnswerIndex == -1) return;
+        selectedAnswerIndex = index;
+        Debug.Log($"Jawaban {index + 1} dipilih. Klik slot untuk menempatkan.");
+    }
 
-        puzzleSlots[slotIndex].sprite = answerButtons[selectedAnswerIndex].image.sprite;
-        currentAnswers[slotIndex] = selectedAnswerIndex;
-        selectedAnswerIndex = -1;
-
-        Debug.Log($"Jawaban ditempatkan di slot {slotIndex + 1}");
+    void OnSlotClicked(int slotIndex)
+    {
+        if (selectedAnswerIndex != -1)
+        {
+            // Tempatkan jawaban
+            puzzleSlots[slotIndex].sprite = answerButtons[selectedAnswerIndex].image.sprite;
+            currentAnswers[slotIndex] = selectedAnswerIndex;
+            selectedAnswerIndex = -1;
+        }
+        else if (currentAnswers[slotIndex] != -1)
+        {
+            // Kembalikan jawaban ke opsi
+            Debug.Log($"Jawaban di slot {slotIndex + 1} dikembalikan.");
+            currentAnswers[slotIndex] = -1;
+            puzzleSlots[slotIndex].sprite = null;
+        }
 
         // Cek apakah semua slot sudah terisi
         bool allFilled = true;
-        foreach (int a in currentAnswers)
-            if (a == -1)
+        foreach (int ans in currentAnswers)
+            if (ans == -1)
                 allFilled = false;
 
         if (allFilled)
@@ -67,15 +87,23 @@ public class PuzzleController : MonoBehaviour
 
     void CheckAnswers()
     {
-        PuzzleQuestion data = (PuzzleQuestion)FindObjectOfType<QuizManager>().questions[
-            FindObjectOfType<QuizManager>().currentIndex];
-
-        int score = 0;
+        int correct = 0;
         for (int i = 0; i < 3; i++)
-            if (currentAnswers[i] == data.correctPlacement[i])
-                score++;
+        {
+            if (currentAnswers[i] == currentQuestion.correctPlacement[i])
+                correct++;
+        }
 
-        Debug.Log($"Benar {score} dari 3 slot.");
-        FindObjectOfType<QuizManager>().NextQuestion();
+        if (correct == 3)
+        {
+            Debug.Log("Semua jawaban benar!");
+            FindObjectOfType<QuizManager>().NextQuestion();
+        }
+        else
+        {
+            onIncorrectMatch?.Invoke();
+            Debug.Log($"Jawaban salah. Benar {correct} dari 3. Reset ulang.");
+            Setup(currentQuestion); // Reset soal
+        }
     }
 }
