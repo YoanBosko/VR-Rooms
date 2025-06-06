@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf41e4daf095a1e4b85a6e8184d78a1a, type: 3}
+  m_Name: Stage4_1_6 MatchingQuestion
+  m_EditorClassIdentifier: 
+  questionType: 1
+  items:
+  - {fileID: -944524281, guid: be247aee2dbf90c41829f754cfdb11bb, type: 3}
+  - {fileID: -1260674697, guid: be247aee2dbf90c41829f754cfdb11bb, type: 3}
+  - {fileID: -1875728246, guid: be247aee2dbf90c41829f754cfdb11bb, type: 3}
+  - {fileID: -702082124, guid: be247aee2dbf90c41829f754cfdb11bb, type: 3}
+  - {fileID: -461447927, guid: be247aee2dbf90c41829f754cfdb11bb, type: 3}
+  matches:
+  - {fileID: 2010479793, guid: 9169ee678a79cc54f92d3a0638b2a0ac, type: 3}
+  - {fileID: -568346443, guid: 9169ee678a79cc54f92d3a0638b2a0ac, type: 3}
+  - {fileID: -2044587757, guid: 9169ee678a79cc54f92d3a0638b2a0ac, type: 3}
+  - {fileID: -2130715348, guid: 9169ee678a79cc54f92d3a0638b2a0ac, type: 3}
+  - {fileID: 1033881277, guid: 9169ee678a79cc54f92d3a0638b2a0ac, type: 3}
+  correctPairs: 0000000001000000020000000300000004000000

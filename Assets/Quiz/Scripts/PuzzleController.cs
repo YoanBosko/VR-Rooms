@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Video;
 
 public class PuzzleController : MonoBehaviour
 {
+    public QuizManager QuizManager;
+
     public Image[] questionImages;     // Gambar pertanyaan (atas)
+    public VideoPlayer[] questionVideos;// Video pertanyaan (atas)
     public Image[] puzzleSlots;        // Slot jawaban (tengah)
     public Button[] answerButtons;     // Opsi jawaban (bawah)
 
@@ -21,7 +25,18 @@ public class PuzzleController : MonoBehaviour
         // Tampilkan gambar pertanyaan
         for (int i = 0; i < 3; i++)
         {
-            questionImages[i].sprite = data.questions[i];
+            if (data.isQuestionUsingVideo == false)
+            {
+                questionImages[i].gameObject.SetActive(true);
+                questionVideos[i].gameObject.SetActive(false);
+                questionImages[i].sprite = data.questions[i];
+            }
+            else
+            {
+                questionImages[i].gameObject.SetActive(false);
+                questionVideos[i].gameObject.SetActive(true);
+                questionVideos[i].clip = data.questionVideo[i];
+            }
         }
 
         // Reset slot kosong
@@ -97,7 +112,7 @@ public class PuzzleController : MonoBehaviour
         if (correct == 3)
         {
             Debug.Log("Semua jawaban benar!");
-            FindObjectOfType<QuizManager>().NextQuestion();
+            QuizManager.NextQuestion();
         }
         else
         {

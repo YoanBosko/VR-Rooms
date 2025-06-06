@@ -7,6 +7,7 @@ using UnityEngine.Video;
 
 public class MCImageController : MonoBehaviour
 {
+    public QuizManager QuizManager;
     public Image questionImage;
     public VideoPlayer questionVideo;
     public Button[] optionButtons;
@@ -33,7 +34,7 @@ public class MCImageController : MonoBehaviour
             optionButtons[i].onClick.RemoveAllListeners();
             optionButtons[i].onClick.AddListener(() => {
                 bool isCorrect = index == data.correctIndex;
-                if (isCorrect) FindObjectOfType<QuizManager>().NextQuestion();
+                if (isCorrect) QuizManager.NextQuestion();
                 else onIncorrectMatch?.Invoke();
                 // Debug.Log(isCorrect ? "Benar!" : "Salah!");
             });

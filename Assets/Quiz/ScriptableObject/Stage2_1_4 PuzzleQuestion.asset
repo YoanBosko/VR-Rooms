@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a807f1e0bba0d49b1abccd4de69a77, type: 3}
+  m_Name: Stage2_1_4 PuzzleQuestion
+  m_EditorClassIdentifier: 
+  questionType: 2
+  isQuestionUsingVideo: 0
+  questionVideo:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  questions:
+  - {fileID: -821976636, guid: 3385b85242966274d8fb9e8736a12f50, type: 3}
+  - {fileID: 798215502, guid: 3385b85242966274d8fb9e8736a12f50, type: 3}
+  - {fileID: 1359569906, guid: 3385b85242966274d8fb9e8736a12f50, type: 3}
+  targets:
+  - {fileID: 21300000, guid: ac52d31cd298a8942ba664a40b4777f3, type: 3}
+  - {fileID: 21300000, guid: ac52d31cd298a8942ba664a40b4777f3, type: 3}
+  - {fileID: 21300000, guid: ac52d31cd298a8942ba664a40b4777f3, type: 3}
+  options:
+  - {fileID: -860451856, guid: a76737a5541bd7347b951e7c04b7e381, type: 3}
+  - {fileID: -797138588, guid: a76737a5541bd7347b951e7c04b7e381, type: 3}
+  - {fileID: -1258733487, guid: a76737a5541bd7347b951e7c04b7e381, type: 3}
+  correctPlacement: 010000000000000002000000

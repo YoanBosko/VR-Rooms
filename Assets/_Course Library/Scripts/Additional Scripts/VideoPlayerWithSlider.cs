@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using TMPro;
+using UnityEngine.Events;
 
 public class VideoPlayerWithSlider : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class VideoPlayerWithSlider : MonoBehaviour
     public Slider slider;            // Drag Slider UI ke Inspector
     public TextMeshProUGUI currentTimeText;     // (Optional) Drag Text UI untuk waktu saat ini
     public TextMeshProUGUI totalTimeText;       // (Optional) Drag Text UI untuk total durasi
+    public UnityEvent onSliderFull;
 
     private bool isPrepared = false;
     private bool isDragging = false;
@@ -41,6 +43,12 @@ public class VideoPlayerWithSlider : MonoBehaviour
                 currentTimeText.text = FormatTime(videoPlayer.time);
             }
         }
+
+        if (slider.value > 0.9f)
+        {
+            onSliderFull?.Invoke();
+        }
+
     }
 
     private void OnVideoPrepared(VideoPlayer vp)

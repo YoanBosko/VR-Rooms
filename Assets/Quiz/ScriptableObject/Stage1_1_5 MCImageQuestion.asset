@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Stage1_1_5 MCImageQuestion
   m_EditorClassIdentifier: 
   questionType: 0
-  questionVisual: {fileID: 21300000, guid: 4f1257a6fb54ab94182071fb03a84097, type: 3}
+  questionVisual: {fileID: 1148701796, guid: 2d9daa0e5715258429c916baf572db25, type: 3}
+  questionVideo: {fileID: 0}
   options:
   - {fileID: 21300000, guid: 4a98ae68e6bc1ea47a49eec99090a1ca, type: 3}
   - {fileID: 21300000, guid: 62b0cf61779aa6841a60ceccdb0e384f, type: 3}

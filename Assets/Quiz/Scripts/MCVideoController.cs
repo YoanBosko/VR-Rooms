@@ -5,6 +5,8 @@ using System;
 
 public class MCVideoController : MonoBehaviour
 {
+    public QuizManager QuizManager;
+
     [Header("Question")]
     public Image questionImage;
     public VideoPlayer questionVideo;
@@ -59,7 +61,7 @@ public class MCVideoController : MonoBehaviour
             optionButtons[i].onClick.RemoveAllListeners();
             optionButtons[i].onClick.AddListener(() => {
                 bool isCorrect = index == data.correctIndex;
-                if (isCorrect) FindObjectOfType<QuizManager>().NextQuestion();
+                if (isCorrect) QuizManager.NextQuestion();
                 else onIncorrectMatch?.Invoke();
                 // Debug.Log(isCorrect ? "Benar!" : "Salah!");
             });

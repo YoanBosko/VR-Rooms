@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: a22c233b67494524589900dc0c023f53
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_SECURITY PERSON
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a415158ce6e7de419d3ac6fb3733e68
+      internalID: -873543479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_BOY
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 542
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0991de74a9e37f34b9b44423242ac920
+      internalID: -1703202105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_IT SECTION
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 208
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a215cf29ea83f1843accfec74ea81b1a
+      internalID: 1308687831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_SHE
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 0
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a613dd3af07d34f8d4dd641054bed9
+      internalID: -762315667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_CHILD
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 542
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb374cff3beffc04c9bb503d84b89281
+      internalID: 1260124196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_MAN
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 270
+        width: 210
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0877790201ae38547aa132721048cc6a
+      internalID: -1713637622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_COLLEAGUE
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 542
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8bfb88285f5bb047b0ebd94530b7786
+      internalID: 1189609241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_SUPERVISER
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 0
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb21355e7fddfb44b0805ec344b86a1
+      internalID: 522457146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_OLD MAN
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 270
+        width: 210
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b511431651c52b2408a2e3fcaa252a74
+      internalID: 1327885488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_COMMUNICATION SECTION
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 542
+        width: 209
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592c1eafc081c634d8b325909ceb1c55
+      internalID: 260246317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_OLD WOMAN
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 270
+        width: 210
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0839a8f9603a02e49b7f2a91e3456bc4
+      internalID: -1908889931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_THEY
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 0
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8759a9cb6940c42acc827e75dae98c
+      internalID: 190754871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_GIRL
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 542
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84b66512ad974d469f748b36ab7f08c
+      internalID: 1146131670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_PEOPLE
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 270
+        width: 210
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d270441e5b0cc478fcdf4c451371d7
+      internalID: 390483721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_WOMAN
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 0
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fc5b0b3362ac24eae11dbae8d98c5d
+      internalID: 505042704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_HE
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 542
+        width: 209
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf2cbb2a6af2884bb8b3d72a8589dcd
+      internalID: -1217698698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_PERSON
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 270
+        width: 210
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d714642a8f4d54d87bf0d5379c4294
+      internalID: 913428289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_YOU
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 0
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bbc67ae1f31b546a99102cab2e9ccb
+      internalID: 158575148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_HR SECTION
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 542
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4f2b27f4560b141abffaf547ff3f98
+      internalID: -882869380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_PRESIDENT
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 270
+        width: 210
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96597647b3e3a7f478c87da5e1e34aaa
+      internalID: -751550269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_YOU(PLURAL)
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 0
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a59cda8ba78cb47ae02b39402d4431
+      internalID: -1362720517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SUBJECT, PEOPLE, WORK_I
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 542
+        width: 211
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5483340969f63249a4ea966cc416d75
+      internalID: 601634958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 77f27fa3366a48946a706e3eee777ed7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SUBJECT, PEOPLE, WORK_BOY: -1703202105
+      SUBJECT, PEOPLE, WORK_CHILD: 1260124196
+      SUBJECT, PEOPLE, WORK_COLLEAGUE: 1189609241
+      SUBJECT, PEOPLE, WORK_COMMUNICATION SECTION: 260246317
+      SUBJECT, PEOPLE, WORK_GIRL: 1146131670
+      SUBJECT, PEOPLE, WORK_HE: -1217698698
+      SUBJECT, PEOPLE, WORK_HR SECTION: -882869380
+      SUBJECT, PEOPLE, WORK_I: 601634958
+      SUBJECT, PEOPLE, WORK_IT SECTION: 1308687831
+      SUBJECT, PEOPLE, WORK_MAN: -1713637622
+      SUBJECT, PEOPLE, WORK_OLD MAN: 1327885488
+      SUBJECT, PEOPLE, WORK_OLD WOMAN: -1908889931
+      SUBJECT, PEOPLE, WORK_PEOPLE: 390483721
+      SUBJECT, PEOPLE, WORK_PERSON: 913428289
+      SUBJECT, PEOPLE, WORK_PRESIDENT: -751550269
+      SUBJECT, PEOPLE, WORK_SECURITY PERSON: -873543479
+      SUBJECT, PEOPLE, WORK_SHE: -762315667
+      SUBJECT, PEOPLE, WORK_SUPERVISER: 522457146
+      SUBJECT, PEOPLE, WORK_THEY: 190754871
+      SUBJECT, PEOPLE, WORK_WOMAN: 505042704
+      SUBJECT, PEOPLE, WORK_YOU: 158575148
+      SUBJECT, PEOPLE, WORK_YOU(PLURAL): -1362720517
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

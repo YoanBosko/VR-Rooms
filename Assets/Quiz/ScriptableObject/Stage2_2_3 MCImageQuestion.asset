@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28fb6eb9d7a7324e8fd555a624cb929, type: 3}
+  m_Name: Stage2_2_3 MCImageQuestion
+  m_EditorClassIdentifier: 
+  questionType: 0
+  questionVisual: {fileID: 0}
+  questionVideo: {fileID: 32900000, guid: b91ddba417a15a8419b77884d861a96a, type: 3}
+  options:
+  - {fileID: -999053814, guid: a76737a5541bd7347b951e7c04b7e381, type: 3}
+  - {fileID: 50809522, guid: a76737a5541bd7347b951e7c04b7e381, type: 3}
+  - {fileID: -723619958, guid: a76737a5541bd7347b951e7c04b7e381, type: 3}
+  correctIndex: 1

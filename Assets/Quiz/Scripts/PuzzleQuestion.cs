@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 [CreateAssetMenu(fileName = "PuzzleQuestion", menuName = "Quiz/Puzzle")]
 public class PuzzleQuestion : QuestionData
 {
-    [Header("Question Image")]
+    [Header("Question Image/Video")]
+    public bool isQuestionUsingVideo;
+    public VideoClip[] questionVideo = new VideoClip[3];
     public Sprite[] questions = new Sprite[3]; // Target lokasi
     [Header("Slot option")]
     public Sprite[] targets = new Sprite[3]; // Target lokasi

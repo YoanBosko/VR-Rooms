@@ -21,6 +21,7 @@ public class QuizManager : MonoBehaviour
     public Sprite normalHealthIcon;
     public UnityEvent onQuizClear;
     private int wrongCounter;
+    private bool endTime = false;
 
     public void Start()
     {
@@ -49,10 +50,13 @@ public class QuizManager : MonoBehaviour
             Start();
         }
 
-        if (slider.value == slider.maxValue)
+        if (slider.value == slider.maxValue & endTime == false)
         {
             onQuizClear?.Invoke();
+            endTime = true;
         }
+
+
     }
 
     void LoadQuestion()
@@ -76,7 +80,7 @@ public class QuizManager : MonoBehaviour
                 matchingPanel.SetActive(true);
                 matchingPanel.GetComponent<MatchingController>().Setup((MatchingQuestion)q);
 
-                matchingPanel.GetComponent<MatchingController>().onIncorrectMatch = (qIndex, aIndex) =>
+                matchingPanel.GetComponent<MatchingController>().onIncorrectMatch = () =>
                 {
                     // Debug.Log($"[QuizManager] Jawaban salah: Soal {qIndex}, Jawaban {aIndex}");
                     // Tambahkan efek suara, penalti, atau feedback visual di sini

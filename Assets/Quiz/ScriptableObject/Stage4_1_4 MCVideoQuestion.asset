@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7e7329ebb265d438c599804b3fcd49, type: 3}
+  m_Name: Stage4_1_4 MCVideoQuestion
+  m_EditorClassIdentifier: 
+  questionType: 3
+  isQuestionUsingVideo: 0
+  questionVideo: {fileID: 0}
+  questionVisual: {fileID: -461447927, guid: be247aee2dbf90c41829f754cfdb11bb, type: 3}
+  options:
+  - {fileID: 21300000, guid: 62b0cf61779aa6841a60ceccdb0e384f, type: 3}
+  - {fileID: 21300000, guid: 4e2eb843d61ec8b4ab4907ced5d8dfd5, type: 3}
+  - {fileID: 21300000, guid: 4a98ae68e6bc1ea47a49eec99090a1ca, type: 3}
+  answerType: 2
+  optionsImageType:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  optionVideosType:
+  - {fileID: 32900000, guid: 974204dcb4b50e7409efd0fa27a94b0b, type: 3}
+  - {fileID: 32900000, guid: ca9eba8732354924f94277c344b0574a, type: 3}
+  - {fileID: 32900000, guid: e0ddc15418bfbb54d81aa0eaabbce8b4, type: 3}
+  correctIndex: 1

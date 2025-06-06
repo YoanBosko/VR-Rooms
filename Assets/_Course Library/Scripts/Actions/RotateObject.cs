@@ -12,6 +12,8 @@ public class RotateObject : MonoBehaviour
     public float speed = 10.0f;
 
     private bool isRotating = false;
+    private bool startTimer = false;
+    private float timer = 0f;
 
     public void SetIsRotating(bool value)
     {
@@ -28,6 +30,7 @@ public class RotateObject : MonoBehaviour
     public void Begin()
     {
         isRotating = true;
+        startTimer = true;
     }
 
     public void End()
@@ -51,6 +54,21 @@ public class RotateObject : MonoBehaviour
     {
         if (isRotating)
             Rotate();
+
+        if(startTimer)
+        {
+            Debug.Log("Mulai Berhitung");
+            timer += Time.deltaTime;
+            if (timer > 7)
+            {
+                Debug.Log("Timer selesai");
+                isRotating = false;
+                startTimer = false;
+                Collider myCollider = GetComponent<Collider>();
+                myCollider.enabled = false;
+                timer = 0f; // reset jika perlu
+            }
+        }
     }
 
     private void Rotate()

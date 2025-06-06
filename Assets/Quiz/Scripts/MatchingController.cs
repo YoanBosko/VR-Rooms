@@ -5,13 +5,15 @@ using System.Collections.Generic;
 
 public class MatchingController : MonoBehaviour
 {
+    public QuizManager QuizManager;
+
     public Button[] questionButtons;
     public Button[] answerButtons;
 
     private int selectedQuestionIndex = -1;
     private bool[] isMatched = new bool[5];
 
-    public Action<int, int> onIncorrectMatch; // event jika jawaban salah (akan kamu isi sendiri)
+    public Action onIncorrectMatch; // event jika jawaban salah (akan kamu isi sendiri)
 
     private MatchingQuestion currentData;
 
@@ -72,13 +74,13 @@ public class MatchingController : MonoBehaviour
             if (allDone)
             {
                 Debug.Log("Semua pasangan benar! Lanjut ke soal berikutnya.");
-                FindObjectOfType<QuizManager>().NextQuestion();
+                QuizManager.NextQuestion();
             }
         }
         else
         {
             Debug.Log("Jawaban SALAH!");
-            onIncorrectMatch?.Invoke(selectedQuestionIndex, answerIndex);
+            onIncorrectMatch?.Invoke();
         }
 
         selectedQuestionIndex = -1;
