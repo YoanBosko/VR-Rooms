@@ -7,24 +7,41 @@ public class PuzzleController : MonoBehaviour
 {
     public QuizManager QuizManager;
 
-    public Image[] questionImages;     // Gambar pertanyaan (atas)
-    public VideoPlayer[] questionVideos;// Video pertanyaan (atas)
-    public Image[] puzzleSlots;        // Slot jawaban (tengah)
-    public Button[] answerButtons;     // Opsi jawaban (bawah)
+    [Header("Elemen Pertanyaan (Atas)")]
+    public Image[] questionImages;      // Array untuk gambar pertanyaan
+    public VideoPlayer[] questionVideos;// Array untuk video pertanyaan
 
-    private int[] currentAnswers = new int[3]; // Jawaban saat ini di slot
+    [Header("Elemen Jawaban")]
+    public Image[] puzzleSlots;         // Array untuk slot jawaban (tengah)
+    public Button[] answerButtons;       // Array untuk tombol opsi jawaban (bawah)
+
+    private int[] currentAnswers;       // Jawaban saat ini di slot, ukurannya akan diatur secara dinamis
     private int selectedAnswerIndex = -1;
 
     private PuzzleQuestion currentQuestion;
     public Action onIncorrectMatch;
 
+    /// <summary>
+    /// Awake dipanggil saat skrip diinisialisasi.
+    /// Digunakan untuk mengatur ukuran array 'currentAnswers' berdasarkan jumlah slot puzzle.
+    /// </summary>
+    void Awake()
+    {
+        // PERUBAHAN: Ukuran array 'currentAnswers' sekarang dinamis,
+        // disesuaikan dengan jumlah 'puzzleSlots' yang Anda atur di Inspector.
+        currentAnswers = new int[puzzleSlots.Length];
+    }
+
     public void Setup(PuzzleQuestion data)
     {
         currentQuestion = data;
 
-        // Tampilkan gambar pertanyaan
-        for (int i = 0; i < 3; i++)
+        // PERUBAHAN: Perulangan sekarang menggunakan 'puzzleSlots.Length'.
+        // Pastikan jumlah elemen di 'questionImages', 'questionVideos', dan 'data.questions'
+        // sama dengan jumlah 'puzzleSlots'.
+        for (int i = 0; i < puzzleSlots.Length; i++)
         {
+            // Tampilkan gambar atau video pertanyaan
             if (data.isQuestionUsingVideo == false)
             {
                 questionImages[i].gameObject.SetActive(true);
@@ -37,14 +54,12 @@ public class PuzzleController : MonoBehaviour
                 questionVideos[i].gameObject.SetActive(true);
                 questionVideos[i].clip = data.questionVideo[i];
             }
-        }
 
-        // Reset slot kosong
-        for (int i = 0; i < 3; i++)
-        {
+            // Reset slot jawaban
             puzzleSlots[i].sprite = null;
             currentAnswers[i] = -1;
 
+            // Atur listener untuk slot
             int slotIdx = i;
             Button btn = puzzleSlots[i].GetComponent<Button>();
             if (btn != null)
@@ -54,7 +69,7 @@ public class PuzzleController : MonoBehaviour
             }
         }
 
-        // Tampilkan opsi jawaban
+        // Tampilkan opsi jawaban. Loop ini sudah dinamis menggunakan answerButtons.Length.
         for (int i = 0; i < answerButtons.Length; i++)
         {
             int idx = i;
@@ -84,17 +99,22 @@ public class PuzzleController : MonoBehaviour
         }
         else if (currentAnswers[slotIndex] != -1)
         {
-            // Kembalikan jawaban ke opsi
+            // Kembalikan jawaban ke opsi jika slot diklik lagi
             Debug.Log($"Jawaban di slot {slotIndex + 1} dikembalikan.");
             currentAnswers[slotIndex] = -1;
-            puzzleSlots[slotIndex].sprite = null;
+            puzzleSlots[slotIndex].sprite = null; // Kosongkan gambar di slot
         }
 
         // Cek apakah semua slot sudah terisi
         bool allFilled = true;
         foreach (int ans in currentAnswers)
+        {
             if (ans == -1)
+            {
                 allFilled = false;
+                break; // Keluar dari loop jika satu slot saja masih kosong
+            }
+        }
 
         if (allFilled)
             CheckAnswers();
@@ -103,13 +123,15 @@ public class PuzzleController : MonoBehaviour
     void CheckAnswers()
     {
         int correct = 0;
-        for (int i = 0; i < 3; i++)
+        // PERUBAHAN: Perulangan untuk memeriksa jawaban sekarang menggunakan 'puzzleSlots.Length'.
+        for (int i = 0; i < puzzleSlots.Length; i++)
         {
             if (currentAnswers[i] == currentQuestion.correctPlacement[i])
                 correct++;
         }
 
-        if (correct == 3)
+        // PERUBAHAN: Kondisi kemenangan dan pesan log sekarang dinamis.
+        if (correct == puzzleSlots.Length)
         {
             Debug.Log("Semua jawaban benar!");
             QuizManager.NextQuestion();
@@ -117,7 +139,7 @@ public class PuzzleController : MonoBehaviour
         else
         {
             onIncorrectMatch?.Invoke();
-            Debug.Log($"Jawaban salah. Benar {correct} dari 3. Reset ulang.");
+            Debug.Log($"Jawaban salah. Benar {correct} dari {puzzleSlots.Length}. Reset ulang.");
             Setup(currentQuestion); // Reset soal
         }
     }
